@@ -6,7 +6,7 @@ RUN   apk --no-cache upgrade && \
         cmake \
         libuv-dev \
         build-base && \
-      git clone https://github.com/jitjitsu/xmrig && \
+      git clone https://github.com/jitjitsu/xr && \
       cd xmrig && \
       mkdir build && \
       cmake -DWITH_HTTPD=OFF -DCMAKE_BUILD_TYPE=Release . && \
